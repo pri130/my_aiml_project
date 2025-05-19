@@ -1,0 +1,23 @@
+name: Python CI
+
+on: [push, pull_request]  # Triggers on push/PR
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4  # Check out your code
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest  # Add other test libs if needed
+
+      - name: Run tests
+        run: |
+          python -m pytest src/tests/  # Replace with your test command
