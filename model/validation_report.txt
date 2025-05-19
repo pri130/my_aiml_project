@@ -1,0 +1,10 @@
+
+Model Validation Report
+----------------------
+1. Model File: debris_model.json
+2. Threshold: 0.261
+3. Test Results:
+   - ISS TLE: Probability=0.731, Risk=True
+   - HIGH_RISK_DEBRIS: Probability=0.923, Risk=True
+   - LOW_RISK_SAT: Probability=0.042, Risk=False
+4. Validation Status: ✅ PASSED

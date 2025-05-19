@@ -1,0 +1,4 @@
+data/                  # Ignore large datasets  
+.env                   # Ignore environment variables  
+__pycache__/  
+*.ipynb_checkpoints  
