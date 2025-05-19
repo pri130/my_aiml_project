@@ -1,10 +1,13 @@
 import pickle
 import pytest
+import os
 
 def test_model_loading():
     """Test if the model loads correctly."""
-    with open("model/model.pkl", "rb") as f:
-        model = pickle.load(f)
-    assert model is not None
-
-# Add more tests for your scripts!
+    try:
+        model_path = os.path.join(os.path.dirname(__file__), "../model/model.pkl")
+        with open(model_path, "rb") as f:
+            model = pickle.load(f)
+        assert model is not None
+    except Exception as e:
+        pytest.fail(f"Model loading failed: {str(e)}")
