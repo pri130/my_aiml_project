@@ -15,9 +15,10 @@ jobs:
 
       - name: Verify files exist
         run: |
-          ls -R  # List all files recursively
-          echo "Checking model exists..."
-          ls model/  # Should show model.pkl
+          echo "Project structure:"
+          ls -R
+          echo "Model directory contents:"
+          ls -l model/
 
       - name: Install dependencies
         run: |
