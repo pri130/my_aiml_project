@@ -5,7 +5,8 @@ import os
 def test_model_loading():
     """Test if the model loads correctly."""
     try:
-        model_path = os.path.join(os.path.dirname(__file__), "../model/model.pkl")
+        # Go up 2 levels from tests/ to reach project root, then into model/
+        model_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__)), "model/model.pkl")
         with open(model_path, "rb") as f:
             model = pickle.load(f)
         assert model is not None
