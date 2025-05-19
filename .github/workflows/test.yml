@@ -13,11 +13,12 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Verify files exist
+      - name: Verify project structure
         run: |
-          echo "Project structure:"
+          echo "Current directory: $PWD"
+          echo "Project contents:"
           ls -R
-          echo "Model directory contents:"
+          echo "Model directory:"
           ls -l model/
 
       - name: Install dependencies
